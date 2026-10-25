@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Virteasy PRO and Desktop haptic dental simulators for university teaching. Book an academic demo with Saratoga, exclusive distributor in Italy.">
+<meta name="theme-color" content="#0d2735">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Virteasy for Universities | Saratoga">
+<meta property="og:description" content="Train the hand before the patient. Haptic dental simulation for university teaching.">
+<meta property="og:image" content="assets/haptics.jpg">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<title>Virteasy for Universities | Saratoga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,500..800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: white brand bar → deep-navy hero with an annotated PRO workstation (spec-sheet callouts) → light clinical sections → navy enquiry band. Left-aligned throughout. */
+:root{
+  --navy:#0d2735; --navy-2:#143646; --ink:#12303f; --muted:#56707c;
+  --teal:#0a8b93; --teal-bright:#3fc6cc; --mist:#eef5f5; --paper:#ffffff; --line:#d6e4e5;
+  --gold:#b8892e;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Instrument Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal-bright);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-stretch:118%;line-height:1.02;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h2{font-size:clamp(2rem,4.4vw,3.4rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:650;line-height:1.2}
+p{margin:0}
+.lede{font-size:1.15rem;color:var(--muted);max-width:58ch}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:600 1rem/1 var(--body);padding:1.05em 1.5em;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--teal-bright);color:var(--navy)}
+.btn-primary:hover{background:#6fd9dd}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px #fff}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--teal)}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:#fff}
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;gap:20px;min-height:72px}
+.brand{flex:none}.brand img{height:34px;width:auto}
+.nav{display:flex;gap:20px;margin-left:auto;font-size:.95rem;font-weight:500;white-space:nowrap}
+.nav a{text-decoration:none;color:var(--ink)}
+.nav a:hover{color:var(--teal)}
+.header-cta{padding:.75em 1.2em;font-size:.92rem;white-space:nowrap}
+.saratoga{flex:none}.saratoga img{height:30px;width:auto}
+@media (max-width:1240px){.nav{display:none}.header-cta{margin-left:auto}}
+.lang-switch{display:inline-flex;flex:none;padding:3px;border-radius:999px;background:var(--mist);box-shadow:inset 0 0 0 1px var(--line)}
+.lang-switch button{font:600 .8rem/1 var(--body);letter-spacing:.04em;color:var(--muted);background:none;border:0;border-radius:999px;padding:.6em .8em;cursor:pointer;transition:background .15s,color .15s}
+.lang-switch button:hover{color:var(--ink)}
+.lang-switch button[aria-pressed="true"]{background:var(--navy);color:#fff}
+@media (max-width:440px){.header-cta{display:none}.lang-switch{margin-left:auto}}
+@media (max-width:520px){.saratoga{display:none}.brand img{height:28px}}
+
+/* Hero */
+.hero{background:radial-gradient(1100px 600px at 78% 40%,#1b4b5c 0%,rgba(27,75,92,0) 60%),var(--navy);color:#fff;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:72px 40px}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.7rem);font-weight:800;font-stretch:125%;line-height:.95}
+.hero h1 span{display:block;color:var(--teal-bright)}
+.hero .lede{color:#b9d0d6;margin-top:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:40px;font-size:.92rem;color:#9fbac2}
+.hero-meta strong{color:#fff;font-weight:600}
+.stage{position:relative;aspect-ratio:1/1;max-width:620px;width:100%;justify-self:end}
+.stage img{width:100%;height:100%;object-fit:contain;animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:.0001;transform:translateY(24px)}to{opacity:1;transform:none}}
+.callout{position:absolute;display:flex;align-items:center;gap:10px;font-size:.85rem;line-height:1.3;color:#e6f3f4;animation:fade .6s ease both}
+.callout:nth-of-type(1){animation-delay:.7s}.callout:nth-of-type(2){animation-delay:.9s}.callout:nth-of-type(3){animation-delay:1.1s}
+@keyframes fade{from{opacity:.0001}to{opacity:1}}
+.callout .dot{flex:none;width:14px;height:14px;border-radius:50%;background:var(--teal-bright);box-shadow:0 0 0 6px rgba(63,198,204,.22)}
+.callout .dot.pulse{animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,198,204,.55)}70%{box-shadow:0 0 0 18px rgba(63,198,204,0)}100%{box-shadow:0 0 0 0 rgba(63,198,204,0)}}
+.callout .rule{flex:none;width:44px;height:1px;background:rgba(255,255,255,.45)}
+.callout b{display:block;font-family:var(--display);font-stretch:112%;font-size:1.05rem;color:#fff}
+.c1{top:9%;left:-4%;flex-direction:row-reverse;text-align:right}
+.c2{top:41%;left:-8%;flex-direction:row-reverse;text-align:right}
+.c3{top:57%;left:55%}
+.c1 .txt,.c2 .txt{max-width:150px}
+.c3 .txt{max-width:170px}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;padding-block:48px 24px}
+  .stage{justify-self:center;max-width:460px}
+  .c1{left:0}.c2{left:0}
+}
+@media (max-width:560px){.callout{display:none}}
+
+.proof{border-top:1px solid rgba(255,255,255,.12)}
+.proof-inner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-block:28px}
+.proof-item{min-width:0}
+.proof-item .num{font-family:var(--display);font-stretch:125%;font-weight:750;font-size:2rem;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.proof-item .num small{font-size:.55em;color:var(--teal-bright);margin-left:3px}
+.proof-item p{font-size:.88rem;color:#9fbac2;margin-top:6px}
+@media (max-width:760px){.proof-inner{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Sections */
+.section{padding-block:96px}
+.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 56px;align-items:end;margin-bottom:52px}
+.section-head .lede{justify-self:start}
+@media (max-width:820px){.section-head{grid-template-columns:1fr}.section{padding-block:68px}}
+.kicker{font-size:.95rem;font-weight:600;color:var(--teal);margin-bottom:14px}
+
+/* Video band */
+.film{position:relative;border-radius:20px;overflow:hidden;background:var(--navy)}
+.film img{width:100%;aspect-ratio:16/8;object-fit:cover;opacity:.82}
+.film-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:16px;padding:clamp(20px,4vw,48px);background:linear-gradient(180deg,rgba(13,39,53,0) 30%,rgba(13,39,53,.88) 100%);color:#fff}
+.film-overlay h2{font-size:clamp(1.7rem,3.6vw,2.8rem);max-width:18ch}
+.play{display:inline-flex;align-items:center;gap:14px;background:none;border:0;color:#fff;font:600 1rem var(--body);cursor:pointer;padding:0;align-self:flex-start}
+.play .disc{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--teal-bright);color:var(--navy);font-size:1.2rem;transition:transform .2s}
+.play:hover .disc{transform:scale(1.08)}
+@media (max-width:560px){.film img{aspect-ratio:4/5}}
+
+/* Learning loop */
+.loop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.loop figure{margin:0;border-radius:20px;overflow:hidden}
+.loop figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .n{font-family:var(--display);font-stretch:125%;font-weight:750;font-size:1.6rem;color:var(--teal);line-height:1}
+.steps p{color:var(--muted);margin-top:6px}
+@media (max-width:860px){.loop{grid-template-columns:1fr;gap:36px}}
+
+/* Models */
+.models{background:var(--mist)}
+.switch{display:inline-flex;background:#fff;border-radius:999px;padding:5px;box-shadow:inset 0 0 0 1px var(--line);margin-bottom:28px}
+.switch button{font:600 .98rem var(--body);border:0;background:none;color:var(--ink);padding:.7em 1.4em;border-radius:999px;cursor:pointer}
+.switch button[aria-selected="true"]{background:var(--navy);color:#fff}
+.model-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;background:#fff;border-radius:24px;padding:clamp(24px,4vw,52px)}
+.model-panel .shot{background:radial-gradient(circle at 50% 55%,#e3f1f2 0%,#fff 70%);border-radius:18px;aspect-ratio:1/1;display:grid;place-items:center;padding:6%}
+.model-panel .shot img{max-height:100%;width:auto;object-fit:contain}
+.model-panel h3{font-size:clamp(1.9rem,3.4vw,2.7rem);font-stretch:120%;font-weight:750}
+.model-panel .tag{font-weight:600;color:var(--teal);margin-bottom:10px}
+.model-panel > div > p{color:var(--muted);margin-top:14px;max-width:46ch}
+.specs{margin:28px 0 30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.specs div{padding:14px 12px 14px 0;border-bottom:1px solid var(--line);min-width:0}
+.specs dt{font-size:.82rem;color:var(--muted)}
+.specs dd{margin:2px 0 0;font-weight:600}
+@media (max-width:860px){.model-panel{grid-template-columns:1fr}.model-panel .shot{max-width:420px}}
+details.compare{margin-top:24px;background:#fff;border-radius:18px;padding:4px 24px}
+details.compare summary{cursor:pointer;font-weight:600;padding:18px 0;list-style:none;display:flex;justify-content:space-between}
+details.compare summary::-webkit-details-marker{display:none}
+details.compare summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--teal)}
+details.compare[open] summary::after{content:"−"}
+.table-wrap{overflow-x:auto;padding-bottom:20px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.95rem}
+th,td{text-align:left;padding:12px 10px;border-top:1px solid var(--line);vertical-align:top}
+thead th{border-top:0;color:var(--muted);font-weight:600;font-size:.85rem}
+tbody th{font-weight:600;width:28%}
+.fine{font-size:.85rem;color:var(--muted);margin-top:8px;padding-bottom:16px}
+
+/* Faculty tools */
+.tools-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:48px;align-items:start}
+.tool-tabs{display:grid;gap:12px}
+.tool-tabs button{text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;cursor:pointer;font:inherit;color:var(--ink);transition:border-color .15s}
+.tool-tabs button strong{display:block;font-family:var(--display);font-stretch:115%;font-size:1.25rem}
+.tool-tabs button span{display:block;color:var(--muted);font-size:.95rem;margin-top:4px}
+.tool-tabs button[aria-selected="true"]{border-color:var(--teal);box-shadow:inset 4px 0 0 var(--teal)}
+.tool-panel figure{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.tool-panel ul{margin:22px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.tool-panel li{background:var(--mist);border-radius:999px;padding:.4em .9em;font-size:.9rem}
+.tool-panel .cap{font-size:.82rem;color:var(--muted);margin-top:10px}
+@media (max-width:860px){.tools-grid{grid-template-columns:1fr}}
+
+/* Evidence */
+.evidence{background:var(--mist)}
+.ev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ev{background:#fff;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.ev .src{font-size:.85rem;color:var(--teal);font-weight:600}
+.ev p{color:var(--muted);font-size:.97rem}
+.ev a{margin-top:auto;font-weight:600;text-decoration:none;color:var(--navy);border-bottom:1.5px solid var(--teal-bright);align-self:flex-start;padding-bottom:2px}
+.ev-note{font-size:.88rem;color:var(--muted);margin-top:24px;max-width:80ch}
+@media (max-width:900px){.ev-grid{grid-template-columns:1fr}}
+
+/* White paper */
+.wp{background:var(--navy);color:#fff;overflow:hidden}
+.wp-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:center}
+.wp-cover{position:relative;justify-self:center;width:100%;max-width:340px}
+.wp-cover::before{content:"";position:absolute;inset:-14% -22% auto auto;width:78%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(63,198,204,.35)}
+.wp-cover img{position:relative;width:100%;border-radius:6px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);transform:rotate(-3deg);transition:transform .3s}
+.wp-cover:hover img{transform:rotate(0)}
+.wp .kicker{color:#e8a33d}
+.wp h2{font-size:clamp(2.2rem,4.8vw,3.6rem);font-stretch:122%;font-weight:800}
+.wp .lede{color:#b9d0d6;margin-top:18px}
+.wp-list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px;color:#dbe9ec;max-width:56ch}
+.wp-list li{display:flex;gap:12px;align-items:baseline}
+.wp-list li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:#e8a33d;transform:translateY(-2px)}
+.wp-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 24px;max-width:520px;margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14)}
+.wp-facts div{font-size:.88rem;color:#9fbac2}
+.wp-facts b{display:block;font-family:var(--display);font-stretch:125%;font-size:1.7rem;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.wp-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:30px}
+.btn-gold{background:#e8a33d;color:var(--navy)}
+.btn-gold:hover{background:#f2bb63}
+.wp-note{font-size:.88rem;color:#9fbac2}
+@media (max-width:860px){.wp-grid{grid-template-columns:1fr;gap:40px}.wp-cover{max-width:260px}}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:48px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font-weight:600;font-size:1.08rem;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:18px;font-size:1.5rem;color:var(--teal)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{color:var(--muted);padding-bottom:22px;max-width:65ch}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:20px}}
+
+/* Demo */
+.demo{background:var(--navy);color:#fff}
+.demo-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.demo h2{font-size:clamp(2.2rem,5vw,4rem);font-stretch:125%;font-weight:800}
+.demo .lede{color:#b9d0d6;margin-top:20px}
+.agenda{list-style:none;padding:0;margin:32px 0 0;display:grid;gap:12px}
+.agenda li{display:flex;gap:12px;align-items:baseline;color:#dbe9ec}
+.agenda li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--teal-bright);transform:translateY(-2px)}
+.contact{margin-top:36px;display:grid;gap:6px;font-size:.95rem;color:#9fbac2}
+.contact a{color:#fff;text-decoration:none;font-weight:600;font-size:1.1rem}
+.form{background:#fff;color:var(--ink);border-radius:24px;padding:clamp(22px,3.6vw,40px);display:grid;gap:16px}
+.form h3{font-size:1.5rem}
+.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:560px){.row{grid-template-columns:1fr}}
+.field{display:grid;gap:6px;min-width:0}
+.field label,.choice legend{font-size:.88rem;font-weight:600}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;color:var(--ink);background:#f7fafa;border:1px solid var(--line);border-radius:12px;padding:.8em .9em;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(10,139,147,.18);background:#fff}
+.choice{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.choice legend{margin-bottom:8px;width:100%}
+.choice label{cursor:pointer}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.choice span{display:inline-block;padding:.55em 1.1em;border-radius:999px;border:1px solid var(--line);font-size:.95rem}
+.choice input:checked + span{background:var(--navy);border-color:var(--navy);color:#fff}
+.choice input:focus-visible + span{outline:3px solid var(--teal-bright);outline-offset:2px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--muted)}
+.consent input{margin-top:4px;accent-color:var(--teal);width:18px;height:18px;flex:none}
+.consent a{color:var(--teal)}
+.hp{position:absolute;left:-5000px}
+.form .btn{justify-content:center;width:100%;font-size:1.05rem}
+.status{border-radius:14px;padding:16px 18px;font-size:.95rem}
+.status.ok{background:#e4f6f1;color:#0e5a46}
+.status.err{background:#fdecea;color:#8a2a1d}
+.status.info{background:var(--mist);color:var(--ink)}
+.status pre{white-space:pre-wrap;font:inherit;font-size:.88rem;margin:10px 0 0;color:var(--muted)}
+.status .mini{margin-top:10px;background:none;border:0;padding:0;font:600 .92rem var(--body);color:var(--teal);cursor:pointer}
+
+/* Footer */
+.footer{padding-block:48px;font-size:.9rem;color:var(--muted)}
+.footer-grid{display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center;justify-content:space-between}
+.footer img{height:38px;width:auto}
+.footer a{color:var(--teal);font-weight:600;text-decoration:none}
+
+/* Video dialog */
+dialog{border:0;padding:0;border-radius:18px;background:#000;max-width:min(1000px,94vw);width:100%}
+dialog::backdrop{background:rgba(6,20,28,.85)}
+dialog video{display:block;width:100%;height:auto}
+.dlg-bar{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;color:#cfe0e3;font-size:.9rem;background:var(--navy)}
+.dlg-bar button{background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;line-height:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Virteasy Dental, back to top"><img src="assets/virteasy-logo.png" width="1568" height="320" alt="Virteasy Dental by HRV"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#classroom">In the classroom</a>
+      <a href="#models">PRO &amp; Desktop</a>
+      <a href="#faculty">Faculty tools</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#whitepaper">White paper</a>
+    </nav>
+    <a class="btn btn-dark header-cta" href="#demo" data-cta="header">Book a demo</a>
+    <a class="saratoga" href="https://www.saratogadental.it/en" target="_blank" rel="noopener" aria-label="Saratoga website (new tab)"><img src="assets/saratoga-logo.png" width="3508" height="822" alt="Saratoga, 50 years"></a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en" lang="en" title="English" aria-pressed="true">EN</button>
+      <button type="button" data-lang="it" lang="it" title="Italiano" aria-pressed="false">IT</button>
+      <button type="button" data-lang="es" lang="es" title="Español" aria-pressed="false">ES</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 id="hero-title">Train the hand <span>before the patient.</span></h1>
+        <p class="lede">Virteasy haptic simulators let dental students practise real procedures and feel the instrument push back. Repeat a preparation as often as needed, then review it with faculty.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#demo" data-cta="hero">Book an academic demo</a>
+          <button class="btn btn-ghost" type="button" data-open-video>Watch a classroom at work</button>
+        </div>
+        <div class="hero-meta">
+          <span>Developed by <strong>HRV Simulation</strong></span>
+          <span>Exclusive distributor: <strong>Saratoga</strong></span>
+        </div>
+      </div>
+      <div class="stage">
+        <img src="assets/pro.png" width="1600" height="1600" alt="Virteasy PRO workstation with two screens, haptic arm and foot pedal" fetchpriority="high">
+        <div class="callout c1"><span class="dot"></span><span class="rule"></span><span class="txt"><b>Two screens</b>Navigation plus a dedicated surgical view</span></div>
+        <div class="callout c2"><span class="dot pulse"></span><span class="rule"></span><span class="txt"><b>Up to 7.9 N</b>Haptic force at the handpiece</span></div>
+        <div class="callout c3"><span class="dot"></span><span class="rule"></span><span class="txt"><b>Height-adjustable</b>Seated or standing posture</span></div>
+      </div>
+    </div>
+    <div class="proof">
+      <div class="wrap proof-inner">
+        <div class="proof-item"><div class="num">2</div><p>Configurations: PRO workstation and compact Desktop</p></div>
+        <div class="proof-item"><div class="num">7.9<small>N</small></div><p>Maximum haptic force on PRO (3.3 N on Desktop)</p></div>
+        <div class="proof-item"><div class="num">127</div><p>Participants in a published study of user perceptions</p></div>
+        <div class="proof-item"><div class="num">50<small>yrs</small></div><p>Saratoga in dentistry, exclusive Virteasy distributor in Italy</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="classroom" class="section" aria-labelledby="film-title">
+    <div class="wrap">
+      <div class="film">
+        <img src="assets/turin.jpg" width="1600" height="900" alt="Students practising on Virteasy workstations while a teacher monitors from his desk at the University of Turin" loading="lazy">
+        <div class="film-overlay">
+          <h2 id="film-title">A full simulation classroom at the University of Turin.</h2>
+          <button class="play" type="button" data-open-video><span class="disc" aria-hidden="true">▶</span>Watch the classroom video</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" aria-labelledby="loop-title">
+    <div class="wrap loop">
+      <figure><img src="assets/desktop-teaching.jpg" width="1600" height="1200" alt="A student smiling while using Virteasy Desktop with its haptic arm" loading="lazy"></figure>
+      <div>
+        <p class="kicker">How a session runs</p>
+        <h2 id="loop-title">Practise, feel, review, repeat.</h2>
+        <ol class="steps" style="margin-top:32px">
+          <li><span class="n">1</span><div><h3>Faculty set the exercise</h3><p>Choose the task and the technique students will practise.</p></div></li>
+          <li><span class="n">2</span><div><h3>Students feel the procedure</h3><p>The haptic device gives force feedback as they work the virtual instrument.</p></div></li>
+          <li><span class="n">3</span><div><h3>Each attempt is reviewed</h3><p>Exercise feedback sits next to the student's own self-assessment.</p></div></li>
+          <li><span class="n">4</span><div><h3>Skills move to the lab</h3><p>Teachers agree what to repeat and check it in physical practice.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="models" class="section models" aria-labelledby="models-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="kicker">Two configurations</p><h2 id="models-title">Pick the format that fits your course.</h2></div>
+        <p class="lede">Both run the same core preclinical exercises and faculty software. PRO adds an integrated workstation and specialist applications.</p>
+      </div>
+      <div class="switch" role="tablist" aria-label="Choose a configuration">
+        <button role="tab" id="t-pro" aria-controls="p-pro" aria-selected="true">Virteasy PRO</button>
+        <button role="tab" id="t-desk" aria-controls="p-desk" aria-selected="false" tabindex="-1">Virteasy Desktop</button>
+      </div>
+      <div class="model-panel" id="p-pro" role="tabpanel" aria-labelledby="t-pro">
+        <div class="shot"><img src="assets/pro.png" width="1600" height="1600" alt="Virteasy PRO workstation" loading="lazy"></div>
+        <div>
+          <p class="tag">Integrated workstation</p>
+          <h3>Virteasy PRO</h3>
+          <p>A height-adjustable station for core operative practice and specialist teaching, from implantology to micro-endodontics.</p>
+          <dl class="specs">
+            <div><dt>Displays</dt><dd>Two screens</dd></div>
+            <div><dt>Max haptic force</dt><dd>7.9 N</dd></div>
+            <div><dt>Mirror practice</dt><dd>Separate tracked mirror</dd></div>
+            <div><dt>Specialist apps</dt><dd>Implantology, micro-endo</dd></div>
+          </dl>
+          <a class="btn btn-dark" href="#demo" data-model="PRO" data-cta="model-pro">Ask about PRO for your course</a>
+        </div>
+      </div>
+      <div class="model-panel" id="p-desk" role="tabpanel" aria-labelledby="t-desk" hidden>
+        <div class="shot"><img src="assets/desktop.png" width="520" height="520" alt="Virteasy Desktop with touchscreen and two haptic devices" loading="lazy"></div>
+        <div>
+          <p class="tag">Compact desktop unit</p>
+          <h3>Virteasy Desktop</h3>
+          <p>A self-contained touchscreen unit for core preclinical practice that sits on a standard desk or bench.</p>
+          <dl class="specs">
+            <div><dt>Display</dt><dd>Touchscreen</dd></div>
+            <div><dt>Max haptic force</dt><dd>3.3 N</dd></div>
+            <div><dt>Haptic devices</dt><dd>One or two</dd></div>
+            <div><dt>Exercises</dt><dd>Restorative, endo, prostho</dd></div>
+          </dl>
+          <a class="btn btn-dark" href="#demo" data-model="Desktop" data-cta="model-desktop">Ask about Desktop for your course</a>
+        </div>
+      </div>
+      <details class="compare">
+        <summary>Compare PRO and Desktop side by side</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Feature</th><th scope="col">PRO</th><th scope="col">Desktop</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Format</th><td>Height-adjustable workstation</td><td>Compact desktop unit</td></tr>
+              <tr><th scope="row">Displays</th><td>Two screens</td><td>Touchscreen</td></tr>
+              <tr><th scope="row">Max haptic force</th><td>7.9 N</td><td>3.3 N</td></tr>
+              <tr><th scope="row">Mirror practice</th><td>Separate tracked mirror</td><td>With the two-device version</td></tr>
+              <tr><th scope="row">Specialist applications</th><td>Implantology and micro-endodontics</td><td>Core preclinical applications</td></tr>
+              <tr><th scope="row">Faculty software</th><td>Assistant and Editor</td><td>Assistant and Editor</td></tr>
+              <tr><th scope="row">Immersive VR</th><td>Optional</td><td>Optional</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine">Modules, VR hardware and software options depend on the package. Saratoga confirms the current configuration in the proposal.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="faculty" class="section" aria-labelledby="faculty-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="kicker">Faculty tools</p><h2 id="faculty-title">Your course, your criteria.</h2></div>
+        <p class="lede">Run the classroom from one desk and build cases around what you already teach.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-tabs" role="tablist" aria-label="Faculty software" aria-orientation="vertical">
+          <button role="tab" id="t-asst" aria-controls="p-asst" aria-selected="true"><strong>Virteasy Assistant</strong><span>Manage groups, assign exercises, follow progress</span></button>
+          <button role="tab" id="t-edit" aria-controls="p-edit" aria-selected="false" tabindex="-1"><strong>Virteasy Editor</strong><span>Create cases from supported scans and models</span></button>
+        </div>
+        <div>
+          <div class="tool-panel" id="p-asst" role="tabpanel" aria-labelledby="t-asst">
+            <figure><img src="assets/assistant.png" width="1200" height="675" alt="Virteasy Assistant exercise evaluation screen" loading="lazy"></figure>
+            <ul><li>Student and group organisation</li><li>Live classroom screen monitoring</li><li>Exercise results and progress</li></ul>
+            <p class="cap">Example interface. Features depend on the supplied version.</p>
+          </div>
+          <div class="tool-panel" id="p-edit" role="tabpanel" aria-labelledby="t-edit" hidden>
+            <figure><img src="assets/editor.jpg" width="1200" height="675" alt="Virteasy Editor screen for selecting a tooth model" loading="lazy"></figure>
+            <ul><li>Supported scan and model imports</li><li>Scenario authoring</li><li>Faculty-defined exercise criteria</li></ul>
+            <p class="cap">Case preparation may need extra processing and specialist input.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="evidence" class="section evidence" aria-labelledby="ev-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="kicker">Published research</p><h2 id="ev-title">What studies have looked at.</h2></div>
+        <p class="lede">Each study covers a specific task or setting. They give your faculty a starting point for its own evaluation.</p>
+      </div>
+      <div class="ev-grid">
+        <article class="ev"><p class="src">Dixon et al., 2021 · Eur J Dent Educ</p><h3>Feedback compared with clinical teachers</h3><p>Virteasy feedback on one operative exercise was compared with teachers' judgements, as a proof of concept for task-specific feedback.</p><a href="https://doi.org/10.1111/eje.12581" target="_blank" rel="noopener">Read the study<span class="sr"> (new tab)</span></a></article>
+        <article class="ev"><p class="src">Fernández-Sagredo et al., 2020 · FEM</p><h3>127 participants rated it useful</h3><p>A descriptive study reported positive perceptions of Virteasy. It measured perceptions, not learning gains.</p><a href="https://scielo.isciii.es/pdf/fem/v23n2/2014-9832-fem-23-2-89.pdf" target="_blank" rel="noopener">Read the study<span class="sr"> (new tab)</span></a></article>
+        <article class="ev"><p class="src">University of Turin · Int Endod J</p><h3>Rehearsal before endodontic microsurgery</h3><p>A case report describes virtual rehearsal on Virteasy before a supervised procedure. It shows a specialist workflow.</p><a href="https://doi.org/10.1111/iej.14239" target="_blank" rel="noopener">Read the case report<span class="sr"> (new tab)</span></a></article>
+      </div>
+      <p class="ev-note">Simulation complements physical and clinical teaching. Findings apply to the tasks and settings studied.</p>
+    </div>
+  </section>
+
+  <section id="whitepaper" class="section wp" aria-labelledby="wp-title">
+    <div class="wrap wp-grid">
+      <a class="wp-cover" href="https://whitepapervirteasy.easyteach.cloud/" target="_blank" rel="noopener" data-cta="whitepaper-cover" aria-label="Practice Before Patients white paper (new tab)"><img src="assets/whitepaper-cover.jpg" width="720" height="932" alt="Cover of the white paper Practice Before Patients by Saratoga" loading="lazy"></a>
+      <div>
+        <p class="kicker">Free white paper</p>
+        <h2 id="wp-title">Practice Before Patients.</h2>
+        <p class="lede">What the research on Virteasy haptic simulation means for learning pathways and productivity in dental schools, including the results that were not favourable.</p>
+        <ul class="wp-list">
+          <li>Where simulation fits between theory and the clinic</li>
+          <li>What the evidence says about instructor time, consumables and lab scheduling</li>
+          <li>Four decisions for deans and course directors, and a 90-day pilot plan</li>
+        </ul>
+        <div class="wp-facts">
+          <div><b>18</b>studies reviewed</div>
+          <div><b>2</b>systematic and scoping reviews</div>
+          <div><b>11</b>pages, in English</div>
+        </div>
+        <div class="wp-actions">
+          <a class="btn btn-gold" href="https://whitepapervirteasy.easyteach.cloud/" target="_blank" rel="noopener" data-cta="whitepaper">Download the white paper</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div><p class="kicker">Questions</p><h2 id="faq-title">Before you book.</h2></div>
+      <div>
+        <details><summary>PRO or Desktop: which suits us?</summary><p>PRO is an adjustable workstation with two screens and specialist implantology and micro-endodontic applications. Desktop is a compact touchscreen unit for core preclinical practice, with one or two haptic devices. A good starting point is one course: the demo helps match the format to it.</p></details>
+        <details><summary>Does it replace our phantom-head lab?</summary><p>No. Virtual exercises sit alongside physical lab work and supervised clinical teaching. Faculty choose the tasks, set the criteria and decide how to assess progress.</p></details>
+        <details><summary>Do students need a VR headset?</summary><p>No. Both configurations work on screen, with an optional immersive VR setup. Headset compatibility is confirmed in the proposal.</p></details>
+        <details><summary>Can our teachers create their own cases?</summary><p>Yes, with Virteasy Editor, from supported scans and models. Some cases need segmentation and specialist input.</p></details>
+        <details><summary>What about installation, training and support?</summary><p>The proposal covers equipment, network, teacher station or server, faculty training, updates and service. Saratoga works this through with your academic, lab and IT teams.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="section demo" aria-labelledby="demo-title">
+    <div class="wrap demo-grid">
+      <div>
+        <h2 id="demo-title">Feel it for yourself.</h2>
+        <p class="lede">Book an academic demo built around one of your exercises. We bring the simulator, you bring the teaching goal.</p>
+        <ul class="agenda">
+          <li>Hands-on session on PRO or Desktop</li>
+          <li>A walkthrough of Assistant and Editor</li>
+          <li>Room, IT and training requirements</li>
+          <li>A proposal shaped around your cohort</li>
+        </ul>
+        <div class="contact">
+          <span>Prefer to talk now?</span>
+          <a href="tel:+390434572600">+39 0434 572600</a>
+          <a href="mailto:customerservice@saratogadental.it">customerservice@saratogadental.it</a>
+        </div>
+      </div>
+
+      <form id="demo-form" class="form" novalidate>
+        <h3>Request an academic demo</h3>
+        <div class="row">
+          <div class="field"><label for="f-first">First name</label><input id="f-first" name="FNAME" autocomplete="given-name" required maxlength="60"></div>
+          <div class="field"><label for="f-last">Last name</label><input id="f-last" name="LNAME" autocomplete="family-name" required maxlength="60"></div>
+        </div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="EMAIL" type="email" autocomplete="email" required maxlength="180"></div>
+        <div class="field"><label for="f-inst">University or institution</label><input id="f-inst" name="INSTITUTE" autocomplete="organization" required maxlength="160"></div>
+        <div class="row">
+          <div class="field"><label for="f-role">Your role</label>
+            <select id="f-role" name="ROLE" required>
+              <option value="">Select</option>
+              <option value="Course or programme director">Course or programme director</option>
+              <option value="Professor or clinical teacher">Professor or clinical teacher</option>
+              <option value="Simulation lab lead">Simulation lab lead</option>
+              <option value="University leadership">University leadership</option>
+              <option value="IT or procurement">IT or procurement</option>
+              <option value="Other">Other</option>
+            </select></div>
+          <div class="field"><label for="f-country">Country</label><input id="f-country" name="COUNTRY" autocomplete="country-name" value="Italy" required maxlength="80"></div>
+        </div>
+        <fieldset class="choice">
+          <legend>Configuration of interest</legend>
+          <label><input type="radio" name="MODEL" value="Both / advise me" checked><span>Both / advise me</span></label>
+          <label><input type="radio" name="MODEL" value="PRO"><span>PRO</span></label>
+          <label><input type="radio" name="MODEL" value="Desktop"><span>Desktop</span></label>
+        </fieldset>
+        <div class="field"><label for="f-msg">What would you like to teach? (optional)</label><textarea id="f-msg" name="MESSAGE" rows="3" maxlength="900" placeholder="For example: operative skills for a first-year cohort of 60 students"></textarea></div>
+        <label class="consent"><input type="checkbox" id="f-privacy" required><span>I have read <a href="https://www.saratogadental.it/it/privacy" target="_blank" rel="noopener">Saratoga's privacy notice</a> and agree to be contacted about this request.</span></label>
+        <label class="consent"><input type="checkbox" id="f-news" name="NEWSOPTIN" value="yes"><span>Send me occasional news about Virteasy and dental simulation. You can unsubscribe at any time.</span></label>
+        <div class="hp" aria-hidden="true"><input type="text" id="f-hp" name="b_hp" tabindex="-1" value=""></div>
+        <button class="btn btn-primary" type="submit" id="f-submit">Request my demo</button>
+        <div id="f-status" class="status" role="status" aria-live="polite" hidden></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <img src="assets/saratoga-logo.png" width="3508" height="822" alt="Saratoga" loading="lazy">
+    <p>Saratoga S.r.l. · Via Luciano Savio 7, 33170 Pordenone, Italy · VAT 00117290932<br>Virteasy Dental is a brand of HRV Simulation. Saratoga is the exclusive distributor in Italy.</p>
+    <a href="https://www.saratogadental.it/en" target="_blank" rel="noopener">saratogadental.it</a>
+  </div>
+</footer>
+
+<dialog id="video">
+  <div class="dlg-bar"><span>University of Turin · classroom footage of an earlier Virteasy configuration</span><button type="button" id="video-close" aria-label="Close video">×</button></div>
+  <video id="video-player" controls playsinline preload="none" poster="assets/turin.jpg"></video>
+</dialog>
+
+<script>
+/* Translations keyed by the English source text (whitespace-normalised). */
+const I18N_DICT = {
+"In the classroom": ["In aula", "En el aula"],
+"PRO & Desktop": ["PRO e Desktop", "PRO y Desktop"],
+"Faculty tools": ["Strumenti per docenti", "Para docentes"],
+"Evidence": ["Studi", "Evidencia"],
+"White paper": ["White paper", "White paper"],
+"Book a demo": ["Prenotate una demo", "Reserve una demo"],
+"Train the hand": ["Allena la mano", "Entrene la mano"],
+"before the patient.": ["prima del paziente.", "antes del paciente."],
+"Virteasy haptic simulators let dental students practise real procedures and feel the instrument push back. Repeat a preparation as often as needed, then review it with faculty.": [
+ "Con i simulatori aptici Virteasy gli studenti di odontoiatria si esercitano su procedure reali e sentono la resistenza dello strumento. Ripetono una preparazione tutte le volte che serve, poi la rivedono con i docenti.",
+ "Con los simuladores hápticos Virteasy, los estudiantes de odontología practican procedimientos reales y sienten la resistencia del instrumento. Repiten una preparación tantas veces como necesiten y luego la revisan con el profesorado."],
+"Book an academic demo": ["Prenotate una demo per l'università", "Reserve una demo académica"],
+"Watch a classroom at work": ["Guardate un'aula al lavoro", "Vea un aula en acción"],
+"Developed by": ["Sviluppato da", "Desarrollado por"],
+"Exclusive distributor:": ["Distributore esclusivo:", "Distribuidor exclusivo:"],
+"Two screens": ["Due schermi", "Dos pantallas"],
+"Navigation plus a dedicated surgical view": ["Navigazione più una vista chirurgica dedicata", "Navegación y una vista quirúrgica dedicada"],
+"Up to 7.9 N": ["Fino a 7,9 N", "Hasta 7,9 N"],
+"Haptic force at the handpiece": ["Forza aptica sul manipolo", "Fuerza háptica en la pieza de mano"],
+"Height-adjustable": ["Regolabile in altezza", "Altura regulable"],
+"Seated or standing posture": ["Si lavora seduti o in piedi", "Se trabaja sentado o de pie"],
+"Configurations: PRO workstation and compact Desktop": ["Configurazioni: postazione PRO e Desktop compatto", "Configuraciones: estación PRO y Desktop compacto"],
+"7.9": ["7,9", "7,9"],
+"7.9 N": ["7,9 N", "7,9 N"],
+"3.3 N": ["3,3 N", "3,3 N"],
+"Maximum haptic force on PRO (3.3 N on Desktop)": ["Forza aptica massima su PRO (3,3 N su Desktop)", "Fuerza háptica máxima en PRO (3,3 N en Desktop)"],
+"Participants in a published study of user perceptions": ["Partecipanti a uno studio pubblicato sulla percezione degli utenti", "Participantes en un estudio publicado sobre la percepción de los usuarios"],
+"yrs": ["anni", "años"],
+"Saratoga in dentistry, exclusive Virteasy distributor in Italy": ["Saratoga nel dentale, distributore esclusivo Virteasy per l'Italia", "Saratoga en odontología, distribuidor exclusivo de Virteasy en Italia"],
+"A full simulation classroom at the University of Turin.": ["Un'aula di simulazione completa all'Università di Torino.", "Un aula de simulación completa en la Universidad de Turín."],
+"Watch the classroom video": ["Guardate il video dell'aula", "Vea el vídeo del aula"],
+"How a session runs": ["Come si svolge una sessione", "Cómo se desarrolla una sesión"],
+"Practise, feel, review, repeat.": ["Esercitarsi, sentire, rivedere, ripetere.", "Practicar, sentir, revisar, repetir."],
+"Faculty set the exercise": ["Il docente imposta l'esercizio", "El docente define el ejercicio"],
+"Choose the task and the technique students will practise.": ["Sceglie il compito e la tecnica su cui gli studenti si eserciteranno.", "Elige la tarea y la técnica que practicarán los estudiantes."],
+"Students feel the procedure": ["Lo studente sente la procedura", "El estudiante siente el procedimiento"],
+"The haptic device gives force feedback as they work the virtual instrument.": ["Il dispositivo aptico restituisce un ritorno di forza mentre usa lo strumento virtuale.", "El dispositivo háptico devuelve fuerza mientras maneja el instrumento virtual."],
+"Each attempt is reviewed": ["Ogni tentativo viene rivisto", "Cada intento se revisa"],
+"Exercise feedback sits next to the student's own self-assessment.": ["Il riscontro dell'esercizio si affianca all'autovalutazione dello studente.", "La valoración del ejercicio se presenta junto a la autoevaluación del estudiante."],
+"Skills move to the lab": ["Le abilità passano al laboratorio", "Las habilidades pasan al laboratorio"],
+"Teachers agree what to repeat and check it in physical practice.": ["I docenti decidono cosa ripetere e lo verificano nella pratica reale.", "Los docentes acuerdan qué repetir y lo comprueban en la práctica física."],
+"Two configurations": ["Due configurazioni", "Dos configuraciones"],
+"Pick the format that fits your course.": ["Scegliete il formato adatto al vostro corso.", "Elija el formato que encaja con su curso."],
+"Both run the same core preclinical exercises and faculty software. PRO adds an integrated workstation and specialist applications.": [
+ "Entrambi eseguono gli stessi esercizi preclinici di base e lo stesso software per docenti. PRO aggiunge una postazione integrata e applicazioni specialistiche.",
+ "Ambos ejecutan los mismos ejercicios preclínicos básicos y el mismo software docente. PRO añade una estación integrada y aplicaciones especializadas."],
+"Integrated workstation": ["Postazione integrata", "Estación integrada"],
+"A height-adjustable station for core operative practice and specialist teaching, from implantology to micro-endodontics.": [
+ "Una postazione regolabile in altezza per la pratica operativa di base e la didattica specialistica, dall'implantologia alla microendodonzia.",
+ "Una estación de altura regulable para la práctica operatoria básica y la enseñanza especializada, de la implantología a la microendodoncia."],
+"Displays": ["Schermi", "Pantallas"],
+"Max haptic force": ["Forza aptica massima", "Fuerza háptica máxima"],
+"Mirror practice": ["Uso dello specchietto", "Práctica con espejo"],
+"Separate tracked mirror": ["Specchietto tracciato separato", "Espejo con seguimiento independiente"],
+"Specialist apps": ["App specialistiche", "Apps especializadas"],
+"Implantology, micro-endo": ["Implantologia, microendo", "Implantología, microendo"],
+"Ask about PRO for your course": ["Chiedete informazioni su PRO", "Consulte sobre PRO para su curso"],
+"Compact desktop unit": ["Unità desktop compatta", "Unidad de sobremesa compacta"],
+"A self-contained touchscreen unit for core preclinical practice that sits on a standard desk or bench.": [
+ "Un'unità touchscreen autonoma per la pratica preclinica di base, da appoggiare su una normale scrivania o un banco.",
+ "Una unidad táctil autónoma para la práctica preclínica básica que se coloca sobre un escritorio o una mesa estándar."],
+"Display": ["Schermo", "Pantalla"],
+"Touchscreen": ["Touchscreen", "Pantalla táctil"],
+"Haptic devices": ["Dispositivi aptici", "Dispositivos hápticos"],
+"One or two": ["Uno o due", "Uno o dos"],
+"Exercises": ["Esercizi", "Ejercicios"],
+"Restorative, endo, prostho": ["Conservativa, endo, protesi", "Restauradora, endo, prótesis"],
+"Ask about Desktop for your course": ["Chiedete informazioni su Desktop", "Consulte sobre Desktop para su curso"],
+"Compare PRO and Desktop side by side": ["Confronto tra PRO e Desktop", "Compare PRO y Desktop"],
+"Feature": ["Caratteristica", "Característica"],
+"Format": ["Formato", "Formato"],
+"Height-adjustable workstation": ["Postazione regolabile in altezza", "Estación de altura regulable"],
+"With the two-device version": ["Con la versione a due dispositivi", "Con la versión de dos dispositivos"],
+"Specialist applications": ["Applicazioni specialistiche", "Aplicaciones especializadas"],
+"Implantology and micro-endodontics": ["Implantologia e microendodonzia", "Implantología y microendodoncia"],
+"Core preclinical applications": ["Applicazioni precliniche di base", "Aplicaciones preclínicas básicas"],
+"Faculty software": ["Software per docenti", "Software docente"],
+"Assistant and Editor": ["Assistant ed Editor", "Assistant y Editor"],
+"Immersive VR": ["Realtà virtuale immersiva", "Realidad virtual inmersiva"],
+"Optional": ["Opzionale", "Opcional"],
+"Modules, VR hardware and software options depend on the package. Saratoga confirms the current configuration in the proposal.": [
+ "Moduli, hardware VR e opzioni software dipendono dal pacchetto. Saratoga conferma la configurazione nella proposta.",
+ "Los módulos, el hardware de RV y las opciones de software dependen del paquete. Saratoga confirma la configuración en la propuesta."],
+"Your course, your criteria.": ["Il vostro corso, i vostri criteri.", "Su curso, sus criterios."],
+"Run the classroom from one desk and build cases around what you already teach.": [
+ "Gestite l'aula da una sola postazione e create casi su ciò che già insegnate.",
+ "Gestione el aula desde un solo puesto y cree casos a partir de lo que ya enseña."],
+"Manage groups, assign exercises, follow progress": ["Gestione dei gruppi, assegnazione degli esercizi, monitoraggio dei progressi", "Gestione grupos, asigne ejercicios, siga el progreso"],
+"Create cases from supported scans and models": ["Creazione di casi da scansioni e modelli supportati", "Cree casos a partir de escaneos y modelos compatibles"],
+"Student and group organisation": ["Organizzazione di studenti e gruppi", "Organización de estudiantes y grupos"],
+"Live classroom screen monitoring": ["Monitoraggio degli schermi in tempo reale", "Supervisión de pantallas en directo"],
+"Exercise results and progress": ["Risultati degli esercizi e progressi", "Resultados de los ejercicios y progreso"],
+"Example interface. Features depend on the supplied version.": ["Interfaccia di esempio. Le funzioni dipendono dalla versione fornita.", "Interfaz de ejemplo. Las funciones dependen de la versión suministrada."],
+"Supported scan and model imports": ["Importazione di scansioni e modelli supportati", "Importación de escaneos y modelos compatibles"],
+"Scenario authoring": ["Creazione di scenari", "Creación de escenarios"],
+"Faculty-defined exercise criteria": ["Criteri degli esercizi definiti dai docenti", "Criterios de ejercicio definidos por el profesorado"],
+"Case preparation may need extra processing and specialist input.": ["La preparazione dei casi può richiedere elaborazione aggiuntiva e il contributo di uno specialista.", "La preparación de casos puede requerir procesamiento adicional y la aportación de un especialista."],
+"Published research": ["Ricerca pubblicata", "Investigación publicada"],
+"What studies have looked at.": ["Cosa hanno esaminato gli studi.", "Qué han analizado los estudios."],
+"Each study covers a specific task or setting. They give your faculty a starting point for its own evaluation.": [
+ "Ogni studio riguarda un compito o un contesto specifico. Offrono ai vostri docenti un punto di partenza per una valutazione propria.",
+ "Cada estudio abarca una tarea o un contexto concretos. Ofrecen a su profesorado un punto de partida para su propia evaluación."],
+"Feedback compared with clinical teachers": ["Riscontro confrontato con i docenti clinici", "Valoración comparada con docentes clínicos"],
+"Virteasy feedback on one operative exercise was compared with teachers' judgements, as a proof of concept for task-specific feedback.": [
+ "Il riscontro di Virteasy su un esercizio operativo è stato confrontato con il giudizio dei docenti, come prova di fattibilità di un riscontro specifico per compito.",
+ "La valoración de Virteasy en un ejercicio operatorio se comparó con el juicio de los docentes, como prueba de concepto de una valoración específica por tarea."],
+"Read the study": ["Leggete lo studio", "Lea el estudio"],
+"(new tab)": ["(nuova scheda)", "(nueva pestaña)"],
+"127 participants rated it useful": ["127 partecipanti lo hanno giudicato utile", "127 participantes lo valoraron como útil"],
+"A descriptive study reported positive perceptions of Virteasy. It measured perceptions, not learning gains.": [
+ "Uno studio descrittivo ha riportato percezioni positive di Virteasy. Ha misurato le percezioni, non i progressi nell'apprendimento.",
+ "Un estudio descriptivo recogió percepciones positivas de Virteasy. Midió percepciones, no mejoras en el aprendizaje."],
+"University of Turin · Int Endod J": ["Università di Torino · Int Endod J", "Universidad de Turín · Int Endod J"],
+"Rehearsal before endodontic microsurgery": ["Prova prima della microchirurgia endodontica", "Ensayo previo a la microcirugía endodóntica"],
+"A case report describes virtual rehearsal on Virteasy before a supervised procedure. It shows a specialist workflow.": [
+ "Un caso clinico descrive una prova virtuale su Virteasy prima di un intervento supervisionato. Mostra un flusso di lavoro specialistico.",
+ "Un caso clínico describe un ensayo virtual en Virteasy antes de un procedimiento supervisado. Muestra un flujo de trabajo especializado."],
+"Read the case report": ["Leggete il caso clinico", "Lea el caso clínico"],
+"Simulation complements physical and clinical teaching. Findings apply to the tasks and settings studied.": [
+ "La simulazione integra la didattica pratica e clinica. I risultati valgono per i compiti e i contesti studiati.",
+ "La simulación complementa la enseñanza práctica y clínica. Los resultados se aplican a las tareas y contextos estudiados."],
+"Free white paper": ["White paper gratuito", "White paper gratuito"],
+"What the research on Virteasy haptic simulation means for learning pathways and productivity in dental schools, including the results that were not favourable.": [
+ "Cosa significa la ricerca sulla simulazione aptica Virteasy per i percorsi di apprendimento e la produttività delle scuole di odontoiatria, compresi i risultati non favorevoli.",
+ "Qué implica la investigación sobre la simulación háptica Virteasy para los itinerarios de aprendizaje y la productividad de las facultades de odontología, incluidos los resultados no favorables."],
+"Where simulation fits between theory and the clinic": ["Dove si colloca la simulazione tra teoria e clinica", "Dónde encaja la simulación entre la teoría y la clínica"],
+"What the evidence says about instructor time, consumables and lab scheduling": ["Cosa dicono gli studi su tempo dei docenti, materiali di consumo e pianificazione dei laboratori", "Qué dice la evidencia sobre el tiempo docente, los consumibles y la planificación de laboratorios"],
+"Four decisions for deans and course directors, and a 90-day pilot plan": ["Quattro decisioni per presidi e coordinatori di corso, e un piano pilota di 90 giorni", "Cuatro decisiones para decanos y directores de curso, y un plan piloto de 90 días"],
+"studies reviewed": ["studi esaminati", "estudios revisados"],
+"systematic and scoping reviews": ["revisioni sistematiche e di scoping", "revisiones sistemáticas y de alcance"],
+"pages, in English": ["pagine, in inglese", "páginas, en inglés"],
+"Download the white paper": ["Scaricate il white paper", "Descargue el white paper"],
+"Questions": ["Domande", "Preguntas"],
+"Before you book.": ["Prima di prenotare.", "Antes de reservar."],
+"PRO or Desktop: which suits us?": ["PRO o Desktop: quale fa per noi?", "PRO o Desktop: ¿cuál nos conviene?"],
+"PRO is an adjustable workstation with two screens and specialist implantology and micro-endodontic applications. Desktop is a compact touchscreen unit for core preclinical practice, with one or two haptic devices. A good starting point is one course: the demo helps match the format to it.": [
+ "PRO è una postazione regolabile con due schermi e applicazioni specialistiche di implantologia e microendodonzia. Desktop è un'unità touchscreen compatta per la pratica preclinica di base, con uno o due dispositivi aptici. Un buon punto di partenza è un singolo corso: la demo aiuta a scegliere il formato adatto.",
+ "PRO es una estación regulable con dos pantallas y aplicaciones especializadas de implantología y microendodoncia. Desktop es una unidad táctil compacta para la práctica preclínica básica, con uno o dos dispositivos hápticos. Un buen punto de partida es un solo curso: la demo ayuda a elegir el formato adecuado."],
+"Does it replace our phantom-head lab?": ["Sostituisce il nostro laboratorio con i manichini?", "¿Sustituye a nuestro laboratorio de simuladores fantoma?"],
+"No. Virtual exercises sit alongside physical lab work and supervised clinical teaching. Faculty choose the tasks, set the criteria and decide how to assess progress.": [
+ "No. Gli esercizi virtuali si affiancano al lavoro in laboratorio e alla didattica clinica supervisionata. I docenti scelgono i compiti, fissano i criteri e decidono come valutare i progressi.",
+ "No. Los ejercicios virtuales acompañan al trabajo de laboratorio y a la enseñanza clínica supervisada. El profesorado elige las tareas, fija los criterios y decide cómo evaluar el progreso."],
+"Do students need a VR headset?": ["Gli studenti hanno bisogno di un visore VR?", "¿Necesitan los estudiantes un visor de RV?"],
+"No. Both configurations work on screen, with an optional immersive VR setup. Headset compatibility is confirmed in the proposal.": [
+ "No. Entrambe le configurazioni funzionano su schermo, con un'opzione VR immersiva. La compatibilità del visore viene confermata nella proposta.",
+ "No. Ambas configuraciones funcionan en pantalla, con una opción de RV inmersiva. La compatibilidad del visor se confirma en la propuesta."],
+"Can our teachers create their own cases?": ["I nostri docenti possono creare casi propri?", "¿Pueden nuestros docentes crear sus propios casos?"],
+"Yes, with Virteasy Editor, from supported scans and models. Some cases need segmentation and specialist input.": [
+ "Sì, con Virteasy Editor, a partire da scansioni e modelli supportati. Alcuni casi richiedono segmentazione e il contributo di uno specialista.",
+ "Sí, con Virteasy Editor, a partir de escaneos y modelos compatibles. Algunos casos requieren segmentación y la aportación de un especialista."],
+"What about installation, training and support?": ["Installazione, formazione e assistenza?", "¿Y la instalación, la formación y el soporte?"],
+"The proposal covers equipment, network, teacher station or server, faculty training, updates and service. Saratoga works this through with your academic, lab and IT teams.": [
+ "La proposta comprende attrezzature, rete, postazione docente o server, formazione dei docenti, aggiornamenti e assistenza. Saratoga ne discute con i vostri referenti accademici, di laboratorio e IT.",
+ "La propuesta incluye equipos, red, puesto docente o servidor, formación del profesorado, actualizaciones y servicio técnico. Saratoga lo coordina con sus equipos académicos, de laboratorio y de TI."],
+"Feel it for yourself.": ["Provatelo di persona.", "Compruébelo usted mismo."],
+"Book an academic demo built around one of your exercises. We bring the simulator, you bring the teaching goal.": [
+ "Prenotate una demo costruita su uno dei vostri esercizi. Noi portiamo il simulatore, voi l'obiettivo didattico.",
+ "Reserve una demo construida en torno a uno de sus ejercicios. Nosotros llevamos el simulador, ustedes el objetivo docente."],
+"Hands-on session on PRO or Desktop": ["Sessione pratica su PRO o Desktop", "Sesión práctica con PRO o Desktop"],
+"A walkthrough of Assistant and Editor": ["Una panoramica di Assistant ed Editor", "Un recorrido por Assistant y Editor"],
+"Room, IT and training requirements": ["Requisiti di aula, IT e formazione", "Requisitos de aula, TI y formación"],
+"A proposal shaped around your cohort": ["Una proposta su misura per i vostri studenti", "Una propuesta adaptada a su promoción"],
+"Prefer to talk now?": ["Preferite parlarne subito?", "¿Prefiere hablar ahora?"],
+"Request an academic demo": ["Richiedete una demo per l'università", "Solicite una demo académica"],
+"First name": ["Nome", "Nombre"],
+"Last name": ["Cognome", "Apellidos"],
+"Email": ["Email", "Correo electrónico"],
+"University or institution": ["Università o istituto", "Universidad o institución"],
+"Your role": ["Il vostro ruolo", "Su cargo"],
+"Select": ["Selezionate", "Seleccione"],
+"Course or programme director": ["Presidente o coordinatore di corso", "Director de curso o programa"],
+"Professor or clinical teacher": ["Professore o docente clinico", "Profesor o docente clínico"],
+"Simulation lab lead": ["Responsabile del laboratorio di simulazione", "Responsable del laboratorio de simulación"],
+"University leadership": ["Direzione dell'università", "Dirección de la universidad"],
+"IT or procurement": ["IT o ufficio acquisti", "TI o compras"],
+"Other": ["Altro", "Otro"],
+"Country": ["Paese", "País"],
+"Configuration of interest": ["Configurazione di interesse", "Configuración de interés"],
+"Both / advise me": ["Entrambe / consigliatemi", "Ambas / asesórenme"],
+"What would you like to teach? (optional)": ["Cosa vorreste insegnare? (facoltativo)", "¿Qué le gustaría enseñar? (opcional)"],
+"I have read": ["Ho letto", "He leído"],
+"Saratoga's privacy notice": ["l'informativa privacy di Saratoga", "la política de privacidad de Saratoga"],
+"and agree to be contacted about this request.": ["e accetto di essere contattato per questa richiesta.", "y acepto que me contacten sobre esta solicitud."],
+"Send me occasional news about Virteasy and dental simulation. You can unsubscribe at any time.": [
+ "Inviatemi occasionalmente novità su Virteasy e sulla simulazione dentale. Potete cancellarvi in qualsiasi momento.",
+ "Envíenme novedades ocasionales sobre Virteasy y la simulación dental. Puede darse de baja en cualquier momento."],
+"Request my demo": ["Richiedete la demo", "Solicitar la demo"],
+"Saratoga S.r.l. · Via Luciano Savio 7, 33170 Pordenone, Italy · VAT 00117290932": [
+ "Saratoga S.r.l. · Via Luciano Savio 7, 33170 Pordenone, Italia · P.IVA 00117290932",
+ "Saratoga S.r.l. · Via Luciano Savio 7, 33170 Pordenone, Italia · IVA 00117290932"],
+"Virteasy Dental is a brand of HRV Simulation. Saratoga is the exclusive distributor in Italy.": [
+ "Virteasy Dental è un marchio di HRV Simulation. Saratoga è il distributore esclusivo per l'Italia.",
+ "Virteasy Dental es una marca de HRV Simulation. Saratoga es el distribuidor exclusivo en Italia."],
+"University of Turin · classroom footage of an earlier Virteasy configuration": [
+ "Università di Torino · riprese in aula di una configurazione Virteasy precedente",
+ "Universidad de Turín · imágenes del aula con una configuración anterior de Virteasy"],
+/* attributes */
+"Virteasy Dental, back to top": ["Virteasy Dental, torna all'inizio", "Virteasy Dental, volver arriba"],
+"Main": ["Principale", "Principal"],
+"Saratoga website (new tab)": ["Sito Saratoga (nuova scheda)", "Web de Saratoga (nueva pestaña)"],
+"Saratoga, 50 years": ["Saratoga, 50 anni", "Saratoga, 50 años"],
+"Virteasy PRO workstation with two screens, haptic arm and foot pedal": ["Postazione Virteasy PRO con due schermi, braccio aptico e pedale", "Estación Virteasy PRO con dos pantallas, brazo háptico y pedal"],
+"Students practising on Virteasy workstations while a teacher monitors from his desk at the University of Turin": ["Studenti che si esercitano sulle postazioni Virteasy mentre un docente li segue dalla sua scrivania all'Università di Torino", "Estudiantes practicando en estaciones Virteasy mientras un docente los supervisa desde su mesa en la Universidad de Turín"],
+"A student smiling while using Virteasy Desktop with its haptic arm": ["Una studentessa sorridente usa Virteasy Desktop con il braccio aptico", "Una estudiante sonriente usa Virteasy Desktop con el brazo háptico"],
+"Choose a configuration": ["Scelta della configurazione", "Elija una configuración"],
+"Virteasy PRO workstation": ["Postazione Virteasy PRO", "Estación Virteasy PRO"],
+"Virteasy Desktop with touchscreen and two haptic devices": ["Virteasy Desktop con touchscreen e due dispositivi aptici", "Virteasy Desktop con pantalla táctil y dos dispositivos hápticos"],
+"Virteasy Assistant exercise evaluation screen": ["Schermata di valutazione degli esercizi di Virteasy Assistant", "Pantalla de evaluación de ejercicios de Virteasy Assistant"],
+"Virteasy Editor screen for selecting a tooth model": ["Schermata di Virteasy Editor per scegliere un modello dentale", "Pantalla de Virteasy Editor para elegir un modelo dental"],
+"Practice Before Patients white paper (new tab)": ["White paper Practice Before Patients (nuova scheda)", "White paper Practice Before Patients (nueva pestaña)"],
+"Cover of the white paper Practice Before Patients by Saratoga": ["Copertina del white paper Practice Before Patients di Saratoga", "Portada del white paper Practice Before Patients de Saratoga"],
+"For example: operative skills for a first-year cohort of 60 students": ["Ad esempio: abilità operative per un primo anno di 60 studenti", "Por ejemplo: habilidades operatorias para un primer curso de 60 estudiantes"],
+"Close video": ["Chiudi il video", "Cerrar el vídeo"],
+"Language": ["Lingua", "Idioma"],
+"Virteasy for Universities | Saratoga": ["Virteasy per le università | Saratoga", "Virteasy para universidades | Saratoga"],
+"Virteasy for Universities": ["Virteasy per le università", "Virteasy para universidades"]
+};
+
+/* Messages produced by the form script, keyed by id: [en, it, es]. */
+const I18N_UI = {
+ sending: ["Sending…", "Invio in corso…", "Enviando…"],
+ submit: ["Request my demo", "Richiedete la demo", "Solicitar la demo"],
+ okTitle: ["Request received.", "Richiesta ricevuta.", "Solicitud recibida."],
+ ok: ["Thank you. The Saratoga team will contact you to plan your demo.", "Grazie. Il team Saratoga vi contatterà per organizzare la demo.", "Gracias. El equipo de Saratoga se pondrá en contacto para organizar la demo."],
+ already: ["You are already in our contacts, and we have updated your details. We will be in touch to plan your demo.", "Siete già nei nostri contatti e abbiamo aggiornato i vostri dati. Vi contatteremo per organizzare la demo.", "Ya figura en nuestros contactos y hemos actualizado sus datos. Le contactaremos para organizar la demo."],
+ errTitle: ["The request was not sent.", "La richiesta non è stata inviata.", "La solicitud no se ha enviado."],
+ errFields: ["Check the fields and try again, or email", "Controllate i campi e riprovate, oppure scrivete a", "Revise los campos y vuelva a intentarlo, o escriba a"],
+ errNet: ["The connection failed. Try again in a moment, or email", "La connessione non è riuscita. Riprovate tra poco, oppure scrivete a", "La conexión ha fallado. Vuelva a intentarlo en un momento, o escriba a"],
+ previewTitle: ["Preview mode.", "Modalità anteprima.", "Modo de vista previa."],
+ preview: ["The form is not connected to Mailchimp yet, so nothing was sent. On the live page this request goes straight to Saratoga. To send it now, email", "Il modulo non è ancora collegato a Mailchimp, quindi non è stato inviato nulla. Sulla pagina pubblicata la richiesta arriva direttamente a Saratoga. Per inviarla ora, scrivete a", "El formulario aún no está conectado a Mailchimp, así que no se ha enviado nada. En la página publicada la solicitud llega directamente a Saratoga. Para enviarla ahora, escriba a"],
+ copy: ["Copy request", "Copia la richiesta", "Copiar la solicitud"],
+ copied: ["Copied", "Copiato", "Copiado"],
+ selected: ["Text selected, press Ctrl+C", "Testo selezionato, premete Ctrl+C", "Texto seleccionado, pulse Ctrl+C"],
+ country: ["Italy", "Italia", "Italia"],
+ metaDesc: ["Virteasy PRO and Desktop haptic dental simulators for university teaching. Book an academic demo with Saratoga, exclusive distributor in Italy.", "Simulatori dentali aptici Virteasy PRO e Desktop per la didattica universitaria. Prenotate una demo con Saratoga, distributore esclusivo per l'Italia.", "Simuladores dentales hápticos Virteasy PRO y Desktop para la docencia universitaria. Reserve una demo con Saratoga, distribuidor exclusivo en Italia."]
+};
+
+/* Language switcher: swaps every translatable text node and attribute in place, no reload. */
+(() => {
+  'use strict';
+  const LANGS = ['en', 'it', 'es'];
+  const KEY = 'virteasy-lang';
+  const COL = { it: 0, es: 1 };
+  const ATTRS = ['alt', 'aria-label', 'placeholder', 'title'];
+  const norm = s => s.replace(/\s+/g, ' ').trim();
+  const tr = (en, lang) => {
+    if (lang === 'en') return en;
+    const v = I18N_DICT[norm(en)];
+    if (!v) return en;
+    return en.match(/^\s*/)[0] + v[COL[lang]] + en.match(/\s*$/)[0];
+  };
+
+  const texts = [], attrs = [];
+  const skip = n => n.parentElement && n.parentElement.closest('script,style,.lang-switch');
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  for (let n; (n = walker.nextNode());) {
+    if (!skip(n) && I18N_DICT[norm(n.nodeValue)]) texts.push({ node: n, en: n.nodeValue });
+  }
+  document.body.querySelectorAll('*').forEach(el => {
+    if (el.closest('.lang-switch') && el.tagName === 'BUTTON') return;
+    ATTRS.forEach(a => {
+      const v = el.getAttribute(a);
+      if (v && I18N_DICT[norm(v)]) attrs.push({ el, a, en: v });
+    });
+  });
+  const titleEn = document.title;
+  const meta = document.querySelector('meta[name="description"]');
+  const country = document.getElementById('f-country');
+  const sarLinks = [...document.querySelectorAll('a[href^="https://www.saratogadental.it/en"]')];
+  const buttons = [...document.querySelectorAll('.lang-switch [data-lang]')];
+
+  let current = 'en';
+  window.vtT = key => (I18N_UI[key] || [key])[LANGS.indexOf(current)] || I18N_UI[key][0];
+
+  function apply(lang) {
+    if (!LANGS.includes(lang)) lang = 'en';
+    current = lang;
+    texts.forEach(o => { o.node.nodeValue = tr(o.en, lang); });
+    attrs.forEach(o => o.el.setAttribute(o.a, tr(o.en, lang)));
+    document.documentElement.lang = lang;
+    document.title = tr(titleEn, lang);
+    if (meta) meta.setAttribute('content', vtT('metaDesc'));
+    if (country && I18N_UI.country.includes(country.value.trim())) country.value = vtT('country');
+    sarLinks.forEach(a => { a.href = lang === 'it' ? 'https://www.saratogadental.it/it' : 'https://www.saratogadental.it/en'; });
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    document.dispatchEvent(new CustomEvent('vt:langchange', { detail: lang }));
+  }
+
+  buttons.forEach(b => b.addEventListener('click', () => {
+    apply(b.dataset.lang);
+    try { localStorage.setItem(KEY, b.dataset.lang); } catch (e) {}
+  }));
+
+  let saved = 'en';
+  try { saved = localStorage.getItem(KEY) || 'en'; } catch (e) {}
+  apply(saved);
+})();
+
+</script>
+
+<script>
+/* ---- Mailchimp connection -------------------------------------------------
+   Paste the form "action" URL from Mailchimp: Audience > Signup forms >
+   Embedded forms > copy the URL in <form action="...">. Example:
+   https://saratogadental.us21.list-manage.com/subscribe/post?u=XXXX&id=YYYY&f_id=ZZZZ
+   TAGS: optional numeric tag id(s) shown in the embed code (hidden "tags" input).
+   Merge tags expected in the audience: FNAME, LNAME, INSTITUTE, ROLE, COUNTRY, MODEL, MESSAGE, NEWSOPTIN.
+---------------------------------------------------------------------------- */
+window.VIRTEASY_MC = window.VIRTEASY_MC || { action: "", tags: "", fallbackEmail: "customerservice@saratogadental.it" };
+
+(() => {
+  'use strict';
+  const $ = s => document.querySelector(s);
+
+  // Tabs (models + faculty tools)
+  function tabs(list){
+    const btns=[...list.querySelectorAll('[role="tab"]')];
+    const show=b=>btns.forEach(x=>{const on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});
+    btns.forEach((b,i)=>{
+      b.addEventListener('click',()=>show(b));
+      b.addEventListener('keydown',e=>{const k=e.key;let n;
+        if(k==='ArrowRight'||k==='ArrowDown')n=btns[(i+1)%btns.length];
+        if(k==='ArrowLeft'||k==='ArrowUp')n=btns[(i-1+btns.length)%btns.length];
+        if(n){e.preventDefault();show(n);n.focus();}});
+    });
+  }
+  document.querySelectorAll('[role="tablist"]').forEach(tabs);
+
+  // Model links preselect the form choice
+  const form=$('#demo-form');
+  document.querySelectorAll('[data-model]').forEach(a=>a.addEventListener('click',()=>{
+    const r=form.querySelector(`input[name="MODEL"][value="${a.dataset.model}"]`); if(r) r.checked=true;
+  }));
+
+  // Video
+  const dlg=$('#video'), player=$('#video-player');
+  document.querySelectorAll('[data-open-video]').forEach(b=>b.addEventListener('click',()=>{
+    if(!player.getAttribute('src')){player.src='assets/turin-classroom.mp4';}
+    dlg.showModal(); player.play().catch(()=>{});
+  }));
+  $('#video-close').addEventListener('click',()=>dlg.close());
+  dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
+  dlg.addEventListener('close',()=>player.pause());
+
+  // Form
+  const status=$('#f-status'), submit=$('#f-submit');
+  const say=(cls,html)=>{status.className='status '+cls;status.innerHTML=html;status.hidden=false;};
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  function summary(d){
+    return ['Virteasy academic demo request','',
+      `Name: ${d.get('FNAME')} ${d.get('LNAME')}`,`Email: ${d.get('EMAIL')}`,`Institution: ${d.get('INSTITUTE')}`,
+      `Role: ${d.get('ROLE')}`,`Country: ${d.get('COUNTRY')}`,`Configuration: ${d.get('MODEL')}`,
+      `Teaching goal: ${d.get('MESSAGE')||'-'}`,`News opt-in: ${d.get('NEWSOPTIN')?'yes':'no'}`].join('\n');
+  }
+
+  function sendMailchimp(d){
+    const cfg=window.VIRTEASY_MC;
+    return new Promise((resolve,reject)=>{
+      const cb='mc_cb_'+Date.now();
+      const p=new URLSearchParams();
+      ['EMAIL','FNAME','LNAME','INSTITUTE','ROLE','COUNTRY','MODEL','MESSAGE'].forEach(k=>p.append(k,d.get(k)||''));
+      if(d.get('NEWSOPTIN')) p.append('NEWSOPTIN','yes');
+      if(cfg.tags) p.append('tags',cfg.tags);
+      // Mailchimp's own bot trap: b_<u>_<id> must stay empty
+      const u=new URL(cfg.action); p.append(`b_${u.searchParams.get('u')}_${u.searchParams.get('id')}`,'');
+      const url=cfg.action.replace('/post?','/post-json?')+'&'+p.toString()+'&c='+cb;
+      const s=document.createElement('script');
+      const t=setTimeout(()=>{cleanup();reject(new Error('timeout'));},12000);
+      function cleanup(){clearTimeout(t);delete window[cb];s.remove();}
+      window[cb]=r=>{cleanup();resolve(r);};
+      s.onerror=()=>{cleanup();reject(new Error('network'));};
+      s.src=url; document.body.appendChild(s);
+    });
+  }
+
+  document.addEventListener('vt:langchange',()=>{status.hidden=true;});
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    const d=new FormData(form);
+    if(d.get('b_hp')) return;
+    const cfg=window.VIRTEASY_MC;
+
+    if(!cfg.action){
+      const text=summary(d);
+      say('info',`<strong>${vtT('previewTitle')}</strong> ${vtT('preview')} <strong>${esc(cfg.fallbackEmail)}</strong>.<pre id="f-sum">${esc(text)}</pre><button type="button" class="mini" id="f-copy">${vtT('copy')}</button>`);
+      $('#f-copy').addEventListener('click',async ev=>{
+        try{await navigator.clipboard.writeText(text);ev.target.textContent=vtT('copied');}
+        catch{const r=document.createRange();r.selectNodeContents($('#f-sum'));const sel=getSelection();sel.removeAllRanges();sel.addRange(r);ev.target.textContent=vtT('selected');}
+      });
+      return;
+    }
+
+    submit.disabled=true; submit.textContent=vtT('sending');
+    try{
+      const r=await sendMailchimp(d);
+      if(r.result==='success'){
+        form.querySelectorAll('input:not([type=radio]):not([type=checkbox]),select,textarea').forEach(el=>{if(el.id!=='f-country')el.value='';});
+        say('ok',`<strong>${vtT('okTitle')}</strong> ${vtT('ok')}`);
+      }else{
+        const msg=String(r.msg||'').replace(/^\d+\s*-\s*/,'');
+        if(/already subscribed/i.test(msg)) say('ok',`<strong>${vtT('okTitle')}</strong> ${vtT('already')}`);
+        else say('err',`<strong>${vtT('errTitle')}</strong> ${esc(msg.replace(/<[^>]*>/g,''))} ${vtT('errFields')} ${esc(cfg.fallbackEmail)}.`);
+      }
+    }catch{
+      say('err',`<strong>${vtT('errTitle')}</strong> ${vtT('errNet')} ${esc(cfg.fallbackEmail)}.`);
+    }finally{submit.disabled=false;submit.textContent=vtT('submit');}
+  });
+})();
+</script>
+
+</body>
+</html>
