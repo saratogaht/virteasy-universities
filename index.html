@@ -535,7 +535,7 @@ dialog video{display:block;width:100%;height:auto}
           <label><input type="radio" name="MODEL" value="PRO"><span>PRO</span></label>
           <label><input type="radio" name="MODEL" value="Desktop"><span>Desktop</span></label>
         </fieldset>
-        <div class="field"><label for="f-msg">What would you like to teach? (optional)</label><textarea id="f-msg" name="MESSAGE" rows="3" maxlength="900" placeholder="For example: operative skills for a first-year cohort of 60 students"></textarea></div>
+        <div class="field"><label for="f-msg">What would you like to teach? (optional)</label><textarea id="f-msg" name="MESSAGE" rows="3" maxlength="250" placeholder="For example: operative skills for a first-year cohort of 60 students"></textarea></div>
         <label class="consent"><input type="checkbox" id="f-privacy" required><span>I have read <a href="https://www.saratogadental.it/it/privacy" target="_blank" rel="noopener">Saratoga's privacy notice</a> and agree to be contacted about this request.</span></label>
         <label class="consent"><input type="checkbox" id="f-news" name="NEWSOPTIN" value="yes"><span>Send me occasional news about Virteasy and dental simulation. You can unsubscribe at any time.</span></label>
         <div class="hp" aria-hidden="true"><input type="text" id="f-hp" name="b_hp" tabindex="-1" value=""></div>
@@ -868,9 +868,10 @@ const I18N_UI = {
    Embedded forms > copy the URL in <form action="...">. Example:
    https://saratogadental.us21.list-manage.com/subscribe/post?u=XXXX&id=YYYY&f_id=ZZZZ
    TAGS: optional numeric tag id(s) shown in the embed code (hidden "tags" input).
-   Merge tags expected in the audience: FNAME, LNAME, INSTITUTE, ROLE, COUNTRY, MODEL, MESSAGE, NEWSOPTIN.
+   Merge tags expected in the audience: FNAME, LNAME, INSTITUTE, ROLE, COUNTRY, MODEL, MESSAGE, NEWSOPTIN, LANG.
+   Connected audience: "Virteasy – Demo requests" (Mailchimp audience ID 894a6e512b).
 ---------------------------------------------------------------------------- */
-window.VIRTEASY_MC = window.VIRTEASY_MC || { action: "", tags: "", fallbackEmail: "customerservice@saratogadental.it" };
+window.VIRTEASY_MC = window.VIRTEASY_MC || { action: "https://saratogadental.us13.list-manage.com/subscribe/post?u=59c4efa0f0ee73d0e511c1adf&id=894a6e512b", tags: "", fallbackEmail: "customerservice@saratogadental.it" };
 
 (() => {
   'use strict';
@@ -924,7 +925,8 @@ window.VIRTEASY_MC = window.VIRTEASY_MC || { action: "", tags: "", fallbackEmail
       const cb='mc_cb_'+Date.now();
       const p=new URLSearchParams();
       ['EMAIL','FNAME','LNAME','INSTITUTE','ROLE','COUNTRY','MODEL','MESSAGE'].forEach(k=>p.append(k,d.get(k)||''));
-      if(d.get('NEWSOPTIN')) p.append('NEWSOPTIN','yes');
+      p.append('NEWSOPTIN', d.get('NEWSOPTIN')?'yes':'no');
+      p.append('LANG', document.documentElement.lang||'en');
       if(cfg.tags) p.append('tags',cfg.tags);
       // Mailchimp's own bot trap: b_<u>_<id> must stay empty
       const u=new URL(cfg.action); p.append(`b_${u.searchParams.get('u')}_${u.searchParams.get('id')}`,'');
