@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Virteasy PRO and Desktop haptic dental simulators for university teaching. Book an academic demo with Saratoga, exclusive distributor in Italy.">
+<meta name="description" content="Virteasy PRO and Desktop haptic dental simulators for university teaching. Book an academic demo with Saratoga, exclusive Virteasy distributor in 12 countries.">
 <meta name="theme-color" content="#0d2735">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Virteasy for Universities | Saratoga">
@@ -255,6 +255,22 @@ tbody th{font-weight:600;width:28%}
 .status pre{white-space:pre-wrap;font:inherit;font-size:.88rem;margin:10px 0 0;color:var(--muted)}
 .status .mini{margin-top:10px;background:none;border:0;padding:0;font:600 .92rem var(--body);color:var(--teal);cursor:pointer}
 
+/* Markets */
+.markets{background:var(--mist);padding-block:72px}
+.markets-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:48px;align-items:start}
+.markets h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.markets .lede{margin-top:16px}
+.regions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.region{background:#fff;border-radius:18px;padding:22px 24px;min-width:0}
+.region h3{font-size:1rem;font-weight:650;color:var(--teal);margin-bottom:12px}
+.region ul{list-style:none;margin:0;padding:0;display:grid;gap:8px 16px}
+.region li{display:flex;gap:10px;align-items:baseline;font-weight:500;min-width:0}
+.region li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--teal-bright);transform:translateY(-2px)}
+.region.wide{grid-column:1/-1}
+.region.wide ul{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:980px){.markets-grid{grid-template-columns:1fr;gap:28px}}
+@media (max-width:640px){.region{padding:18px}.region.wide ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 /* Footer */
 .footer{padding-block:48px;font-size:.9rem;color:var(--muted)}
 .footer-grid{display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center;justify-content:space-between}
@@ -317,7 +333,7 @@ dialog video{display:block;width:100%;height:auto}
         <div class="proof-item"><div class="num">2</div><p>Configurations: PRO workstation and compact Desktop</p></div>
         <div class="proof-item"><div class="num">7.9<small>N</small></div><p>Maximum haptic force on PRO (3.3 N on Desktop)</p></div>
         <div class="proof-item"><div class="num">127</div><p>Participants in a published study of user perceptions</p></div>
-        <div class="proof-item"><div class="num">50<small>yrs</small></div><p>Saratoga in dentistry, exclusive Virteasy distributor in Italy</p></div>
+        <div class="proof-item"><div class="num">50<small>yrs</small></div><p>Saratoga in dentistry, exclusive Virteasy distributor in 12 countries</p></div>
       </div>
     </div>
   </section>
@@ -544,6 +560,21 @@ dialog video{display:block;width:100%;height:auto}
       </form>
     </div>
   </section>
+
+  <section id="countries" class="markets" aria-labelledby="markets-title">
+    <div class="wrap markets-grid">
+      <div>
+        <p class="kicker">Where we work</p>
+        <h2 id="markets-title">Your Virteasy partner in 12 countries.</h2>
+        <p class="lede">Saratoga is the exclusive Virteasy distributor in these countries. Contact us for demos, proposals and support in any of them.</p>
+      </div>
+      <div class="regions">
+        <div class="region"><h3>Europe</h3><ul><li>Italy</li><li>Spain</li></ul></div>
+        <div class="region"><h3>North America</h3><ul><li>United States</li><li>Canada</li></ul></div>
+        <div class="region wide"><h3>Middle East and North Africa</h3><ul><li>Egypt</li><li>United Arab Emirates</li><li>Saudi Arabia</li><li>Oman</li><li>Kuwait</li><li>Qatar</li><li>Bahrain</li><li>Libya</li></ul></div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
@@ -589,7 +620,25 @@ const I18N_DICT = {
 "Maximum haptic force on PRO (3.3 N on Desktop)": ["Forza aptica massima su PRO (3,3 N su Desktop)", "Fuerza háptica máxima en PRO (3,3 N en Desktop)"],
 "Participants in a published study of user perceptions": ["Partecipanti a uno studio pubblicato sulla percezione degli utenti", "Participantes en un estudio publicado sobre la percepción de los usuarios"],
 "yrs": ["anni", "años"],
-"Saratoga in dentistry, exclusive Virteasy distributor in Italy": ["Saratoga nel dentale, distributore esclusivo Virteasy per l'Italia", "Saratoga en odontología, distribuidor exclusivo de Virteasy en Italia"],
+"Saratoga in dentistry, exclusive Virteasy distributor in 12 countries": ["Saratoga nel dentale, distributore esclusivo Virteasy in 12 paesi", "Saratoga en odontología, distribuidor exclusivo de Virteasy en 12 países"],
+"Where we work": ["Dove operiamo", "Dónde trabajamos"],
+"Your Virteasy partner in 12 countries.": ["Il vostro partner Virteasy in 12 paesi.", "Su socio Virteasy en 12 países."],
+"Saratoga is the exclusive Virteasy distributor in these countries. Contact us for demos, proposals and support in any of them.": ["Saratoga è il distributore esclusivo Virteasy in questi paesi. Contattateci per demo, proposte e assistenza in ognuno di essi.", "Saratoga es el distribuidor exclusivo de Virteasy en estos países. Contáctenos para demos, propuestas y soporte en cualquiera de ellos."],
+"Europe": ["Europa", "Europa"],
+"North America": ["Nord America", "Norteamérica"],
+"Middle East and North Africa": ["Medio Oriente e Nord Africa", "Oriente Medio y Norte de África"],
+"Italy": ["Italia", "Italia"],
+"Spain": ["Spagna", "España"],
+"United States": ["Stati Uniti", "Estados Unidos"],
+"Canada": ["Canada", "Canadá"],
+"Egypt": ["Egitto", "Egipto"],
+"United Arab Emirates": ["Emirati Arabi Uniti", "Emiratos Árabes Unidos"],
+"Saudi Arabia": ["Arabia Saudita", "Arabia Saudí"],
+"Oman": ["Oman", "Omán"],
+"Kuwait": ["Kuwait", "Kuwait"],
+"Qatar": ["Qatar", "Catar"],
+"Bahrain": ["Bahrein", "Baréin"],
+"Libya": ["Libia", "Libia"],
 "A full simulation classroom at the University of Turin.": ["Un'aula di simulazione completa all'Università di Torino.", "Un aula de simulación completa en la Universidad de Turín."],
 "Watch the classroom video": ["Guardate il video dell'aula", "Vea el vídeo del aula"],
 "How a session runs": ["Come si svolge una sessione", "Cómo se desarrolla una sesión"],
@@ -796,7 +845,7 @@ const I18N_UI = {
  copied: ["Copied", "Copiato", "Copiado"],
  selected: ["Text selected, press Ctrl+C", "Testo selezionato, premete Ctrl+C", "Texto seleccionado, pulse Ctrl+C"],
  country: ["Italy", "Italia", "Italia"],
- metaDesc: ["Virteasy PRO and Desktop haptic dental simulators for university teaching. Book an academic demo with Saratoga, exclusive distributor in Italy.", "Simulatori dentali aptici Virteasy PRO e Desktop per la didattica universitaria. Prenotate una demo con Saratoga, distributore esclusivo per l'Italia.", "Simuladores dentales hápticos Virteasy PRO y Desktop para la docencia universitaria. Reserve una demo con Saratoga, distribuidor exclusivo en Italia."]
+ metaDesc: ["Virteasy PRO and Desktop haptic dental simulators for university teaching. Book an academic demo with Saratoga, exclusive Virteasy distributor in 12 countries.", "Simulatori dentali aptici Virteasy PRO e Desktop per la didattica universitaria. Prenotate una demo con Saratoga, distributore esclusivo Virteasy in 12 paesi.", "Simuladores dentales hápticos Virteasy PRO y Desktop para la docencia universitaria. Reserve una demo con Saratoga, distribuidor exclusivo de Virteasy en 12 países."]
 };
 
 /* Language switcher: swaps every translatable text node and attribute in place, no reload. */
